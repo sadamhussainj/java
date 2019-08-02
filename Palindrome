@@ -1,0 +1,18 @@
+import java.util.Scanner;
+class Palindrome {
+public static void main(String[] qwe) {
+System.out.println("Enter the value");
+Scanner Scan=new Scanner(System.in);
+int N=Scan.nextInt();
+int temp=N;
+int rev=0;
+while(temp!=0){
+rev=rev*10+temp%10;
+temp=temp/10;
+}
+if (N==rev)
+System.out.println(rev+"is palindrome of"+N);
+else
+System.out.println(rev"is not a palindrome of"+N);
+}
+}
