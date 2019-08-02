@@ -1,0 +1,15 @@
+import java.util.Scanner;
+class ArrayEven{
+public static void main(String[] qwe) {
+System.out.println("Enter the value");
+Scanner Scan=new Scanner(System.in);
+int N=Scan.nextInt();
+int Q=Scan.nextInt();
+for(int i=N;(N<=i)&&(i<=Q);i++){
+if(i%2!=0)
+continue;
+else
+System.out.println(i+" EVEN");
+}
+}
+}
