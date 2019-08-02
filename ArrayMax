@@ -1,0 +1,19 @@
+import java.util.Scanner;
+class ArrayMax{
+public static void main(String[] qwe) {
+System.out.println("Enter the value");
+Scanner Scan=new Scanner(System.in);
+int N=Scan.nextInt();
+int[] arr=new int[N];
+for(int i=0;i<N;i++){
+int temp=Scan.nextInt();
+arr[i]=temp;
+}
+int max=arr[0];
+for(int i=1;i<N;i++){
+if(max<arr[i])
+max=arr[i];
+}
+System.out.println(max+"is maximum number");
+}
+}
