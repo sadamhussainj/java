@@ -1,0 +1,16 @@
+import java.util.Scanner;
+class PrintArray{
+public static void main(String[] qwe){
+Scanner Scan=new Scanner(System.in);
+System.out.println("Enter the value");
+int N=Scan.nextInt();
+int K=Scan.nextInt();
+int[] arr=new int[N];
+for(int i=0;i<N;i++){
+int temp=Scan.nextInt();
+arr[i]=temp;
+}
+System.out.println("output");
+for(int k=0;k<N;k++)
+System.out.println("arr[k]");
+}}
