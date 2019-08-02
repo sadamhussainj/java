@@ -1,0 +1,26 @@
+import java.util.Scanner;
+class Prime{
+public static void main(String[] qwe) {
+System.out.println("Enter the value");
+Scanner Scan=new Scanner(System.in);
+int N=Scan.nextInt();
+int flag=0;
+for(int i=2;i<=N/2;i++){
+if(N%i==0){
+flag=1;
+break;
+}
+else{
+continue;
+}
+}
+if(flag==0)
+{
+System.out.println(" prime");
+}
+else
+{
+System.out.println(" not prime");
+}
+}
+}
