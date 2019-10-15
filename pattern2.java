@@ -29,3 +29,4 @@ printStars(n);
   @@@
  @@@@
 @@@@@
+//After 180 degree rotation
