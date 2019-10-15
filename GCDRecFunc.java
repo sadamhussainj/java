@@ -1,7 +1,5 @@
-// Java program to find GCD of two numbers 
 class GCDRecFunc
 { 
-	// Recursive function to return gcd of a and b 
 	static int gcd(int a, int b) 
 	{ 
 	if (b == 0) 
@@ -9,7 +7,6 @@ class GCDRecFunc
 	return gcd(b, a % b); 
 	} 
 	
-	// Driver method 
 	public static void main(String[] args) 
 	{ 
 		int a = 98, b = 56; 
