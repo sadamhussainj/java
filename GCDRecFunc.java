@@ -1,5 +1,5 @@
 // Java program to find GCD of two numbers 
-class RecFuncGCD
+class GCDRecFunc
 { 
 	// Recursive function to return gcd of a and b 
 	static int gcd(int a, int b) 
