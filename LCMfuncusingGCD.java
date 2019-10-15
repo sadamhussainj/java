@@ -1,4 +1,4 @@
-class LCMfucn 
+class LCMfuncusingGCD 
 { 
 static int gcd(int a, int b) 
 	{ 
