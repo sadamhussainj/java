@@ -39,7 +39,7 @@ public class pattern4
     } 
 } 
 Output:
-
+//num pattern
 1 
 1 2 
 1 2 3 
