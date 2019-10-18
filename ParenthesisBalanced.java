@@ -1,86 +1,47 @@
-public class ParenthesisBalanced{ 
-	static class stack 
-	{ 
-		int top=-1; 
-		char items[] = new char[100]; 
+import java.util.Stack;
 
-		void push(char x) 
-		{ 
-			if (top == 99) 
-			{ 
-				System.out.println("Stack full"); 
-			} 
-			else
-			{ 
-				items[++top] = x; 
-			} 
-		} 
+public class Main
+{
+public static boolean balParenthesis(String exp)
+{
+Stack stack = new Stack();
 
-		char pop() 
-		{ 
-			if (top == -1) 
-			{ 
-				System.out.println("Underflow error"); 
-				return '\0'; 
-			} 
-			else
-			{ 
-				char element = items[top]; 
-				top--; 
-				return element; 
-			} 
-		} 
+for (int i = 0; i < exp.length(); i++)
+{
+if (exp.charAt(i) == ‘(‘ || exp.charAt(i) == ‘{‘ ||
+exp.charAt(i) == ‘[‘) {
+stack.push(exp.charAt(i));
+}
 
-		boolean isEmpty() 
-		{ 
-			return (top == -1) ? true : false; 
-		} 
-	} 
-	static boolean isMatchingPair(char character1, char character2) 
-	{ 
-	if (character1 == '(' && character2 == ')') 
-		return true; 
-	else if (character1 == '{' && character2 == '}') 
-		return true; 
-	else if (character1 == '[' && character2 == ']') 
-		return true; 
-	else
-		return false; 
-	} 
-	static boolean areParenthesisBalanced(char exp[]) 
-	{ 
-	stack st=new stack(); 
-	for(int i=0;i<exp.length;i++) 
-	{ 
-		if (exp[i] == '{' || exp[i] == '(' || exp[i] == '[') 
-			st.push(exp[i]); 
-		if (exp[i] == '}' || exp[i] == ')' || exp[i] == ']') 
-		{ 
-			if (st.isEmpty()) 
-			{ 
-				return false; 
-			} 
-			else if ( !isMatchingPair(st.pop(), exp[i]) ) 
-			{ 
-				return false; 
-			} 
-		} 
-			
-	} 
-	if (st.isEmpty()) 
-		return true;
-	else
-		{ 
-			return false; 
-		} 
-	} 
-	public static void main(String[] args) 
-	{ 
-		char exp[] = {'{','(',')','}','[',']'}; 
-		if (areParenthesisBalanced(exp)) 
-			System.out.println("Balanced "); 
-		else
-			System.out.println("Not Balanced "); 
-	} 
+if (exp.charAt(i) == ‘)’ || exp.charAt(i) == ‘}’ ||
+exp.charAt(i) == ‘]’)
+{
+if (stack.empty()) {
+return false;
+}
 
-} 
+Character top = stack.pop();
+
+if ((top == ‘(‘ && exp.charAt(i) != ‘)’) ||
+(top == ‘{‘ && exp.charAt(i) != ‘}’) ||
+(top == ‘[‘ && exp.charAt(i) != ‘]’)) {
+
+return false;
+}
+}
+}
+
+return stack.empty();
+}
+
+public static void main(String[] args)
+{
+String exp = “{()}[{}]”;
+
+if (balParenthesis(exp)) {
+System.out.println(“The expression is balanced”);
+} else {
+System.out.println(“The expression is not balanced”);
+}
+}
+}
